@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.cabecalho {
+    background-color: #151515;
+    padding: 20px;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.destaque {
+    background-color: #e23636; 
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.herois {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.galeria-imagens {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.galeria {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.img-modal {
+    width: 100%;
+    max-width: 350px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.img-modal:hover {
+    transform: scale(1.05); /* Dá um leve zoom quando passa o mouse */
+    box-shadow: 0 8px 16px rgba(226, 54, 54, 0.6); /* Sombra vermelha da Marvel no hover */
+}
