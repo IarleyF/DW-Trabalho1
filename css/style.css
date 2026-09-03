@@ -1,3 +1,14 @@
+:root {
+    --preto: #0b0b0f;
+    --lua: #151515;
+    --vermelho-marvel: #e23636;
+    --vermelho-demolidor: #3d0f0c;
+    --vermelho-aranha: #c41221;
+    --azul-aranha: #070d47;
+    --espaco-lg: 40px;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -5,8 +16,20 @@
     font-family: sans-serif;
 }
 
+.poder-lua, 
+.chamada-nelson-murdock, 
+.chamada-clarim {
+    min-height: 400px; 
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
 .cabecalho {
-    background-color: #151515;
+    background-color: #000;
     padding: 20px;
 }
 
@@ -51,6 +74,13 @@
     text-align: center;
 }
 
+.card a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
 .galeria-imagens {
     display: flex;
     justify-content: center;
@@ -77,20 +107,35 @@
 
 .img-modal:hover {
     transform: scale(1.05); /* Dá um leve zoom quando passa o mouse */
-    box-shadow: 0 8px 16px rgba(226, 54, 54, 0.6); /* Sombra vermelha da Marvel no hover */
+    box-shadow: 0 8px 16px rgba(34, 33, 33, 0.6); /* Sombra vermelha da Marvel no hover */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Cavaleiro da Lua */
 
 .destaque-lua {
-    background-color: var(--preto, #151515);
+    background-color: var(--lua);
 }
 
 .poder-lua {
-    background-color: #0a0a1a;
+    background-color: var(--lua);
     color: white;
     text-align: center;
-    padding: var(--espaco-lg, 40px) 20px;
 }
 
 .lua-container {
@@ -107,6 +152,22 @@
     animation: brilho-khonshu 3s ease-in-out infinite;
 }
 
+.img-modal-lua {
+    width: 100%;
+    max-width: 350px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.img-modal-lua:hover {
+    transform: scale(1.05); /* Dá um leve zoom quando passa o mouse */
+    box-shadow: 0 8px 16px var(--lua);
+}
+
 @keyframes brilho-khonshu {
     0%, 100% {
         box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.4);
@@ -115,5 +176,196 @@
     50% {
         box-shadow: 0 0 50px 20px rgba(255, 255, 255, 0.9);
         transform: scale(1.05);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Daredevil */
+.destaque-dd {
+    background-color: var(--vermelho-demolidor);
+}
+
+.chamada-nelson-murdock {
+    background-color: var(--vermelho-demolidor);
+    color: white;
+    text-align: center;
+}
+
+/* O botão circular animado */
+.selo-contrato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 50%; 
+    border: 3px solid #fff;
+    
+    animation: pulsarSentidoRadar 1s infinite alternate;
+    transition: transform 0.3s ease;
+}
+
+.selo-contrato:hover {
+    transform: scale(1.1);
+    color: white;
+}
+
+
+@keyframes pulsarSentidoRadar {
+    0% {
+        box-shadow: 0 0 15px rgba(240, 57, 57, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 40px rgb(0, 0, 0), 0 0 80px rgb(196, 30, 30);
+    }
+}
+
+.img-modal-dd {
+    width: 100%;
+    max-width: 350px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.img-modal-dd:hover {
+    transform: scale(1.05); /* Dá um leve zoom quando passa o mouse */
+    box-shadow: 0 8px 16px var(--vermelho-demolidor);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MIRANHA */
+
+.destaque-spidey {
+    background-color: var(--vermelho-aranha);
+}
+
+.chamada-clarim {
+    background-color: var(--azul-aranha);
+    color: white;
+    text-align: center;
+}
+
+.camera-container {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.lente-camera {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    background-color: #222;
+    color: white;
+    text-decoration: none;
+    font-size: 3rem;
+    border-radius: 50%;
+    border: 5px solid #555;
+
+    animation: flashCamera 3s infinite;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+@keyframes flashCamera {
+    0%, 90%, 100% {
+        box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+        background-color: #222;
+    }
+    95% {
+        box-shadow: 0 0 60px 30px rgba(255, 255, 255, 0.9);
+        background-color: #ffffff;
+    }
+}
+.lente-camera:hover {
+    transform: scale(1.1);
+    border-color: var(--vermelho-aranha);
+}
+
+.img-modal-spidey {
+    width: 100%;
+    max-width: 350px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.img-modal-spidey:hover {
+    transform: scale(1.05); /* Dá um leve zoom quando passa o mouse */
+    box-shadow: 0 8px 16px var(--vermelho-aranha); /* Sombra vermelha da Marvel no hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* PARA CELULAR */
+@media (max-width: 768px) {
+    
+    .menu ul {
+        flex-direction: column; /* Muda os links de lado a lado para empilhados */
+        align-items: center;    /* Centraliza os links na tela */
+        gap: 15px;              /* Reduz o espaço entre eles para caber melhor */
+    }
+
+    .cards-grid {
+        /* Muda de 3 colunas para apenas 1 coluna no celular, 
+           ocupando 100% da largura disponível */
+        grid-template-columns: 1fr; 
+    }
+
+    .destaque h1, 
+    .destaque-demolidor h1, 
+    .destaque-aranha h1, 
+    .destaque-lua h1 {
+        font-size: 2rem; 
     }
 }
