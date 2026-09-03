@@ -5,7 +5,6 @@
     --vermelho-demolidor: #3d0f0c;
     --vermelho-aranha: #c41221;
     --azul-aranha: #070d47;
-    --espaco-lg: 40px;
 }
 
 
@@ -55,9 +54,45 @@
 }
 
 .herois {
-    padding: 40px 20px;
+    max-width: 900px;
+    margin: 40px auto;     /* Centraliza o bloco na página */
+    padding: 0 20px;
     text-align: center;
 }
+
+.herois h2 {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.herois::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.img-float-left {
+    float: left;             /* Joga a imagem para a esquerda */
+    width: 220px;            /* Define uma largura controlada */
+    height: 160px;           /* Altura fixa */
+    object-fit: cover;       /* Evita distorção da foto */
+    border-radius: 6px;      /* Bordas arredondadas */
+    margin-right: 20px;      /* Afasta o texto da imagem na horizontal pra direita*/
+    margin-bottom: 10px;     /* Afasta o texto da imagem na vertical */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.img-float-right {
+    float: right;             /* Joga a imagem para a esquerda */
+    width: 220px;            /* Define uma largura controlada */
+    height: 160px;           /* Altura fixa */
+    object-fit: cover;       /* Evita distorção da foto */
+    border-radius: 6px;      /* Bordas arredondadas */
+    margin-left: 20px;      /* Afasta o texto da imagem na horizontal pra esquerda */
+    margin-bottom: 10px;     /* Afasta o texto da imagem na vertical */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
 
 .cards-grid {
     display: grid;
